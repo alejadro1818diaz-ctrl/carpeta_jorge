@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parqueadero don alejorico</title>
+    <link rel="stylesheet" href="actividad.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Parqueadero don alejorico</h2>
+    
+    <div id="error" class="error-msg"></div>
+
+    <form id="parqueaderoForm">
+        <div class="row">
+            <div class="form-group">
+                <label for="tipoVehiculo">Tipo de Vehículo</label>
+                <select id="tipoVehiculo" required>
+                    <option value="Automóvil">Automóvil</option>
+                    <option value="Moto">Moto</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="placa">Placa del Vehículo</label>
+                <input type="text" id="placa" placeholder="Ej: ABC123" required style="text-transform: uppercase;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label for="ingreso">Fecha y Hora de Ingreso</label>
+                <input type="datetime-local" id="ingreso" required>
+            </div>
+            <div class="form-group">
+                <label for="salida">Fecha y Hora de Salida</label>
+                <input type="datetime-local" id="salida" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>¿Aplica Descuento Pico y Placa? (Solo Automóviles - 25%)</label>
+            <select id="picoPlaca">
+                <option value="no">No</option>
+                <option value="si">Sí</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="calcularCobro()">Calcular Tiempo y Pago</button>
+
+        <div id="seccionPago" class="seccion-pago">
+            <h3>Simulación de Pago</h3>
+            <div class="form-group">
+                <label for="dineroIngresado">Efectivo Ingresado por el Cliente ($)</label>
+                <input type="number" id="dineroIngresado" placeholder="Ej: 50000">
+            </div>
+            <button type="button" onclick="procesarPago()" class="btn-pagar">Pagar y Descargar papelito</button>
+        </div>
+    </form>
+
+    <div id="resultados" class="results">
+        <h3>Liquidación del Servicio</h3>
+        <p><strong>Tiempo total:</strong> <span id="resTiempo"></span> minutos (<span id="resHoras"></span> horas)</p>
+        <p><strong>Valor Base:</strong> $<span id="resValorBase"></span></p>
+        <p><strong>Descuento aplicado:</strong> $<span id="resDescuento"></span></p>
+        <p><strong>Valor Ajustado (Múltiplo de 50):</strong> <strong class="text-danger">$<span id="resValorFinal"></span></strong></p>
+        
+        <div id="vueltasContainer" style="display: none;">
+            <p><strong>Cambio Total:</strong> $<span id="resCambio"></span></p>
+            <div class="vueltas-box">
+                <strong>Desglose de cambio (Efectivo):</strong>
+                <div id="desgloseVueltas"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="parqueadero.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+:root {
+    --primary: #2563eb;
+    --primary-hover: #2dd81d;
+    --background: #f8fcf9;
+    --card-bg: #ffffff;
+    --text: #1e1e3b;
+    --border: #e7e2f0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(119, 9, 9, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 600px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary);
+    color: yellow;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.seccion-pago {
+    display: none; 
+    margin-top: 20px; 
+    border-top: 1px solid var(--border); 
+    padding-top: 15px;
+}
+
+.btn-pagar {
+    background-color:green;
+}
+
+.btn-pagar:hover {
+    background-color: #059669;
+}
+
+.results {
+    margin-top: 25px;
+    padding: 15px;
+    background-color:green;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary);
+    display: none;
+}
+
+.results p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.text-danger {
+    color: #b91c1c;
+}
+
+.vueltas-box {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    margin-top: 10px;
+}
+
+.error-msg {
+    color: #dc2626;
+    background-color: #fef2f2;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+}

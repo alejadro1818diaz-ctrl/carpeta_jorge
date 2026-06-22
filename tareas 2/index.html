@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas de Alejandro Diaz</title>
+  <link rel="stylesheet" href="./actividad.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+  <img src="./580b57fcd9996e24bc43c516.png" alt="Logo" class="logo">
+  <h1>Lista de Tareas de Alejandro Diaz</h1>
+
+  <form action="#" id="usuario">
+    <input type="text" id="inputTarea" placeholder="Escriba la tarea ..." autofocus>
+    <input type="submit" value="+" id="agregar">
+  </form>
+
+  <section class="lista" id="contLista">
+    <article class="tareas" id="1">
+      <label>
+        <input type="checkbox">
+        Tarea 1
+      </label>
+      <i class="fa-solid fa-trash borrar"></i>
+    </article>
+  </section>
+
+  <section id="estadistica">
+    Tareas pendientes: 0 Completadas: 0
+  </section>
+
+  <script src="./tarea.js"></script>
+</body>
+</html>
